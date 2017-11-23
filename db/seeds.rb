@@ -17,3 +17,6 @@ parsed_file["drinks"].each do |hash|
 end
 
 
+10.times do
+  Cocktail.create!(name: Faker::Coffee.unique.blend_name)
+end
