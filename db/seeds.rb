@@ -18,5 +18,12 @@ end
 
 
 10.times do
-  Cocktail.create!(name: Faker::Coffee.unique.blend_name)
+  cocktail = Cocktail.create!(name: Faker::Coffee.unique.blend_name)
+
+  3.times do
+    dose = Dose.new(description: Faker::Measurement.unique.metric_volume)
+    dose.cocktail_id = cocktail.id
+    dose.ingredient_id = (1..50).to_a.sample
+    dose.save!
+  end
 end
