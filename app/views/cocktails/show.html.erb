@@ -7,8 +7,11 @@
     <% ingredient.doses.each do |dose| %>
       <% if dose.cocktail_id == @cocktail.id %>
         <p><%= dose.description %></p>
+        <%= link_to "Delete ingredient", dose_path(dose), method: :delete, data: { confirm: "Are you ABSOLUTELY sure you want to delete the ingredient FOR EVER?"} %>
         <p>---</p>
       <% end %>
     <% end %>
 <% end %>
+
+<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %>
 

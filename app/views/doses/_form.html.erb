@@ -1,0 +1,7 @@
+<% ingredients = Ingredient.all.each_with_object([]) { |ingredient, array| array << ingredient.name } %>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient, prompt: "ingredient", collection: ingredients, as: :select %>
+  <%= f.submit %>
+<% end %>
