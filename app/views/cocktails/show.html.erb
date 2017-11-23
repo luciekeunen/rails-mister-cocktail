@@ -1,17 +1,44 @@
-<%= link_to "Home", root_path %>
-<h3> <%= @cocktail.name %> </h3>
+<div class="container">
+  <div class="row header">
+    <div class="col-xs-12">
+      <h1 class="text-center"> <%= @cocktail.name %> </h1>
+    </div>
+  </div>
 
-<h4> Ingredients : </h4>
-<% @cocktail.ingredients.each do |ingredient| %>
-  <p> <%= ingredient.name %> </p>
-    <% ingredient.doses.each do |dose| %>
-      <% if dose.cocktail_id == @cocktail.id %>
-        <p><%= dose.description %></p>
-        <%= link_to "Delete ingredient", dose_path(dose), method: :delete, data: { confirm: "Are you ABSOLUTELY sure you want to delete the ingredient FOR EVER?"} %>
-        <p>---</p>
-      <% end %>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-center">Ingredients</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @cocktail.ingredients.each do |ingredient| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+            <div class="top" id="ingredient">
+              <h3> <%= ingredient.name %> </h3>
+            </div>
+            <% ingredient.doses.each do |dose| %>
+              <% if dose.cocktail_id == @cocktail.id %>
+                <div class="bottom">
+                  <p>
+                    <%= dose.description %>
+                    <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you ABSOLUTELY sure you want to delete the ingredient FOR EVER?"} do %>
+                      <i class="fa fa-trash text-right" aria-hidden="true"></i>
+                    <% end %>
+                  </p>
+                </div>
+              <% end %>
+            <% end %>
+        </div>
+      </div>
     <% end %>
-<% end %>
+  </div>
 
-<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="text-center"> <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %> </h3>
+    </div>
+  </div>
+</div>
 

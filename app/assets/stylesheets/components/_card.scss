@@ -1,0 +1,43 @@
+.card {
+  margin: 20px;
+  height: 250px;
+
+  .top {
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('cocktail.jpg');
+    background-size: cover;
+    padding: 20px;
+    height: 70%;
+    color: white;
+    h3 {
+      margin-top: 5px;
+    }
+  }
+
+  // .picture {
+  //   width : auto;
+  //   background-size : cover;
+  // }
+
+  .bottom {
+    background-color: white;
+    padding: 20px;
+    height: 30%;
+    position : relative;
+    p {
+      padding: 5px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.3);
+  }
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}

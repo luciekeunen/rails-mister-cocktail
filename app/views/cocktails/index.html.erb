@@ -1,7 +1,18 @@
-<%= link_to "New cocktail", new_cocktail_path %>
-
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail_path(cocktail) do %>
-    <p><%= cocktail.name %></p>
-  <% end %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="top">
+              <!-- <%= image_tag 'cocktail.jpg', class: "picture"%> -->
+            </div>
+            <div class="bottom text-center">
+              <p><%= cocktail.name %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

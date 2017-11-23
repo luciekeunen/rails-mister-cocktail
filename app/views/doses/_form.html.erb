@@ -7,7 +7,7 @@
 
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :ingredient_id, prompt: "Ingredient", collection: Ingredient.all, as: :select %>
-  <%= f.submit %>
+  <%= f.input :ingredient_id, label:false, prompt: "Ingredient", collection: Ingredient.all, as: :select, class: "form-control" %>
+  <%= f.input :description, label: false, placeholder: "Amount?", class: "form-control" %>
+  <%= f.submit "Add", class: "btn btn-primary form-control"%>
 <% end %>
