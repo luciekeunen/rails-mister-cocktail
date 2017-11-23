@@ -11,7 +11,7 @@
 }
 
 #ingredient {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-url("logo.ico");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-url("logo.ico");
   background-size: cover;
 }
 
@@ -21,6 +21,11 @@
   right: 25px;
   bottom: 28px;
   font-size: x-large;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 a:hover {
