@@ -1,5 +1,5 @@
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-url('cocktail.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-url("cocktail.jpg");
   background-size: cover;
   margin: 20px;
   height: 250px;
@@ -11,7 +11,7 @@
 }
 
 #ingredient {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('logo.ico');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-url("logo.ico");
   background-size: cover;
 }
 
