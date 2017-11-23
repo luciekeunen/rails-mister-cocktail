@@ -6,8 +6,6 @@ class DosesController < ApplicationController
 
   def create
     @dose = Dose.new(dose_params)
-    @ingredient = Ingredient.find_by(name: params[:dose]["ingredient"])
-    @dose.ingredient_id = @ingredient.id
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose.cocktail_id = @cocktail.id
     if @dose.save
@@ -26,6 +24,6 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    params.require(:dose).permit(:description)
+    params.require(:dose).permit(:description, :ingredient_id)
   end
 end

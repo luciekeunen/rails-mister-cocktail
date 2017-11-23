@@ -1,7 +1,13 @@
-<% ingredients = Ingredient.all.each_with_object([]) { |ingredient, array| array << ingredient.name } %>
+<!--
+  It's better to write Ingredient.all in the collection
+  in order to get the ingredient_id when we select the ingredient
+  No need to create the following array :
+  <% ingredients = Ingredient.all.each_with_object([]) { |ingredient, array| array << ingredient.name } %>
+-->
+
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.input :ingredient, prompt: "ingredient", collection: ingredients, as: :select %>
+  <%= f.input :ingredient_id, prompt: "Ingredient", collection: Ingredient.all, as: :select %>
   <%= f.submit %>
 <% end %>
