@@ -28,3 +28,23 @@ url_photo = "http://static1.villaschweppes.com/articles/1/40/21/@/13236-le-cockt
     dose.save!
   end
 end
+
+sugar = Ingredient.find_by(name: "Sugar")
+sugar.remote_photo_url = 'http://16411-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2017/01/sugar-on-black-web.jpg'
+sugar.save!
+
+ice = Ingredient.find_by(name: "Ice")
+ice.remote_photo_url = 'http://www.thewitnesswithin.com/wp-content/files_flutter/1284165005ice_cubes5.jpg'
+ice.save!
+
+carbonated_water = Ingredient.find_by(name: "Carbonated water")
+carbonated_water.remote_photo_url = 'https://ak7.picdn.net/shutterstock/videos/8327647/thumb/1.jpg'
+carbonated_water.save!
+
+# sugar = Ingredient.find_by(name: "Sugar")
+# sugar.remote_photo_url = 'http://16411-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2017/01/sugar-on-black-web.jpg'
+# sugar.save!
+
+# sugar = Ingredient.find_by(name: "Sugar")
+# sugar.remote_photo_url = 'http://16411-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2017/01/sugar-on-black-web.jpg'
+# sugar.save!

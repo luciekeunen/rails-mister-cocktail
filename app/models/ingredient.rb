@@ -3,4 +3,6 @@ class Ingredient < ApplicationRecord
   has_many :cocktails, through: :doses
 
   validates :name, presence: true, uniqueness: true
+
+  mount_uploader :photo, PhotoUploader
 end
