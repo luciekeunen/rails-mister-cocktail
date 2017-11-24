@@ -41,9 +41,9 @@ carbonated_water = Ingredient.find_by(name: "Carbonated water")
 carbonated_water.remote_photo_url = 'https://ak7.picdn.net/shutterstock/videos/8327647/thumb/1.jpg'
 carbonated_water.save!
 
-# sugar = Ingredient.find_by(name: "Sugar")
-# sugar.remote_photo_url = 'http://16411-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2017/01/sugar-on-black-web.jpg'
-# sugar.save!
+amaretto = Ingredient.find_by(name: "Amaretto")
+amaretto.remote_photo_url = 'http://www.totalwine.com/media/sys_master/twmmedia/h9e/hdc/9292790759454.png'
+amaretto.save!
 
 # sugar = Ingredient.find_by(name: "Sugar")
 # sugar.remote_photo_url = 'http://16411-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2017/01/sugar-on-black-web.jpg'
