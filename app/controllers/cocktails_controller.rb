@@ -14,7 +14,8 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-    @cocktail.name = @cocktail.name.capitalize
+    # To capitalize, make the validation on unique name case insensitive
+    # @cocktail.name = @cocktail.name.capitalize
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
