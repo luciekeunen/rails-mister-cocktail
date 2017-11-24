@@ -15,29 +15,35 @@
     <% @cocktail.ingredients.each do |ingredient| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card" >
-            <div class="top" style="background-color: black; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= image_default(ingredient)%>'); background-size: cover;">
-              <h3> <%= ingredient.name %> </h3>
-            </div>
-            <% ingredient.doses.each do |dose| %>
-              <% if dose.cocktail_id == @cocktail.id %>
-                <div class="bottom">
-                  <p>
-                    <%= dose.description %>
-                    <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you ABSOLUTELY sure you want to delete the ingredient FOR EVER?"} do %>
-                      <i class="fa fa-trash text-right" aria-hidden="true"></i>
-                    <% end %>
-                  </p>
-                </div>
-              <% end %>
+          <div class="top" style="background-color: black; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= image_default(ingredient)%>'); background-size: cover;">
+            <h3> <%= ingredient.name %> </h3>
+          </div>
+          <% ingredient.doses.each do |dose| %>
+            <% if dose.cocktail_id == @cocktail.id %>
+              <div class="bottom">
+                <p>
+                  <%= dose.description %>
+                  <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you ABSOLUTELY sure you want to delete the ingredient FOR EVER?"} do %>
+                    <i class="fa fa-trash text-right" aria-hidden="true"></i>
+                  <% end %>
+                </p>
+              </div>
             <% end %>
+          <% end %>
         </div>
       </div>
     <% end %>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <h3 class="text-center"> <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %> </h3>
-    </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" id="add">
+          <%= link_to new_cocktail_dose_path(@cocktail) do %>
+            <div class="top">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            <div class="bottom">
+              <p>Add ingredient</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>

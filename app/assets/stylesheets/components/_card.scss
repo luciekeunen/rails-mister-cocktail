@@ -34,3 +34,18 @@
     text-decoration: none;
   }
 }
+
+#add {
+  background-color: black;
+  color: black;
+  opacity : 0.8;
+  &:hover {
+    opacity: 1;
+  }
+
+  .fa-plus {
+    font-size: 50px;
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+}
