@@ -1,6 +1,4 @@
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-url("cocktail.jpg");
-  background-size: cover;
   margin: 20px;
   height: 250px;
   color: white;
@@ -8,11 +6,6 @@
   h1 {
     padding: 30px;
   }
-}
-
-#ingredient {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-url("logo.ico");
-  background-size: cover;
 }
 
 .fa-trash {

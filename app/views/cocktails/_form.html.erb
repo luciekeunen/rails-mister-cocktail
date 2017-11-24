@@ -1,4 +1,6 @@
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, label: false, placeholder: "What's the name of your cocktail?", class: "form-control" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit class: "btn btn-primary form-control" %>
 <% end %>

@@ -42,6 +42,11 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+# User-side upload of images
+gem 'cloudinary'
+# Upload files associated to Models
+gem 'carrierwave', '~> 0.11.2'
+
 # To securely configure Rails applications
 gem 'figaro'
 

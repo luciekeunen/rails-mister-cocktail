@@ -16,11 +16,12 @@ parsed_file["drinks"].each do |hash|
  Ingredient.create!(name: hash["strIngredient1"])
 end
 
+url_photo = "http://static1.villaschweppes.com/articles/1/40/21/@/13236-le-cocktail-cardinal-article_top-2.jpg"
 
 10.times do
-  cocktail = Cocktail.create!(name: Faker::Coffee.unique.blend_name)
+  cocktail = Cocktail.create!(name: Faker::Coffee.unique.blend_name, remote_photo_url: url_photo)
 
-  3.times do
+  2.times do
     dose = Dose.new(description: Faker::Measurement.unique.metric_volume)
     dose.cocktail_id = cocktail.id
     dose.ingredient_id = (1..50).to_a.sample

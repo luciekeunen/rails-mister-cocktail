@@ -7,7 +7,8 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+         url('<%= image_default(cocktail)%>'); background-color: black; background-size: cover">
           <%= link_to cocktail_path(cocktail) do %>
             <div class="top">
               <!-- <%= image_tag 'cocktail.jpg', class: "picture"%> -->

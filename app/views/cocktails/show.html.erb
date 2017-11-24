@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="row header">
+  <div class="row header" style="background-color: black; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+         url('<%= image_default(@cocktail)%>')"; background-size: cover;>
     <div class="col-xs-12">
       <h1 class="text-center"> <%= @cocktail.name %> </h1>
     </div>
@@ -14,8 +15,8 @@
   <div class="row">
     <% @cocktail.ingredients.each do |ingredient| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
-            <div class="top" id="ingredient">
+        <div class="card" >
+            <div class="top" style="background-color:black; background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= image_path 'logo.ico' %>')">
               <h3> <%= ingredient.name %> </h3>
             </div>
             <% ingredient.doses.each do |dose| %>
